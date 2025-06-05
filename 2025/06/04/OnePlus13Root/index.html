@@ -23,7 +23,7 @@
   <meta name="description" content="1 获取 Root 权限步骤1.1 下载全量包前往 https://yun.daxiaamu.com/OnePlus_Roms/ 下载 ColorOS PJZ110_15.0.0.301(CN01) A.35 全量包，下载后使用payload_dumper_go提取init_boot.img
 ...">
   
-  <meta name="keywords" content="OnePlus 13, root">
+  <meta name="keywords" content="OnePlus 13">
 
   <!-- feed -->
   
@@ -68,7 +68,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Miscellaneous/">Miscellaneous</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2025-06-03T16:00:00.000Z">2025-06-04</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2025-06-05T10:37:04.609Z">2025-06-05</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2025-06-03T16:00:00.000Z">2025-06-04</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2025-06-05T13:31:53.530Z">2025-06-05</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -92,7 +92,7 @@
 
 <p>执行完成后使用音量键选择选项<code>UNLOCK THE BOOTLOADER</code>，使用锁屏键确认。</p>
 <p>等待系统初始化，完成基础系统设置之后同样需要打开<code>开发者选项</code>和<code>USB调试</code>，按照上文描述的步骤进行即可。</p>
-<h2 id="1-3-修补init-boot-img"><a href="#1-3-修补init-boot-img" class="headerlink" title="1.3 修补init_boot.img"></a>1.3 修补init_boot.img</h2><p>在一加13上安装<code>KernelSu.apk</code>: 点击<code>https://github.com/tiann/KernelSU/releases/download/v1.0.2/KernelSU_v1.0.2_11986-release.apk</code>下载或是前往<a target="_blank" rel="noopener" href="https://github.com/tiann/KernelSU/releases%E8%87%AA%E8%A1%8C%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%60KernelSu.apk%60,%E5%AE%89%E8%A3%85%E5%90%8E%E5%B0%86%E6%8F%90%E5%8F%96%E5%A5%BD%E7%9A%84%60init_boot.img%60%E6%8B%B7%E8%B4%9D%E5%88%B0%E4%B8%80%E5%8A%A013%E8%AE%BE%E5%A4%87%E4%B8%AD%EF%BC%8C%E4%BD%BF%E7%94%A8%60KernelSu.apk%60%E7%82%B9%E5%87%BB%E5%AE%89%E8%A3%85%E6%8C%89%E9%92%AE%EF%BC%8C%E9%80%89%E6%8B%A9%60init_boot.img%60%E8%BF%9B%E8%A1%8C%E4%BF%AE%E8%A1%A5%EF%BC%8C%E5%86%8D%E5%B0%86%E4%BF%AE%E8%A1%A5%E5%A5%BD%E7%9A%84%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D%E5%9B%9E%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E4%BB%A5%E5%A4%87%E4%BD%BF%E7%94%A8%E3%80%82">https://github.com/tiann/KernelSU/releases自行下载最新版`KernelSu.apk`,安装后将提取好的`init_boot.img`拷贝到一加13设备中，使用`KernelSu.apk`点击安装按钮，选择`init_boot.img`进行修补，再将修补好的文件拷贝回计算机中以备使用。</a></p>
+<h2 id="1-3-修补init-boot-img"><a href="#1-3-修补init-boot-img" class="headerlink" title="1.3 修补init_boot.img"></a>1.3 修补init_boot.img</h2><p>在一加13上安装<code>KernelSu.apk</code>: 点击<code>https://github.com/tiann/KernelSU/releases/download/v1.0.2/KernelSU_v1.0.2_11986-release.apk</code>下载或是前往<a target="_blank" rel="noopener" href="https://github.com/tiann/KernelSU/releases">https://github.com/tiann/KernelSU/releases</a> 自行下载最新版<code>KernelSu.apk</code>,安装后将提取好的<code>init_boot.img</code>拷贝到一加13设备中，使用<code>KernelSu.apk</code>点击安装按钮，选择<code>init_boot.img</code>进行修补，再将修补好的文件拷贝回计算机中以备使用。</p>
 <h2 id="1-4-获取root权限"><a href="#1-4-获取root权限" class="headerlink" title="1.4 获取root权限"></a>1.4 获取root权限</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">adb devices</span><br><span class="line">adb reboot bootloader</span><br><span class="line">fastboot devices</span><br><span class="line">fastboot flash init_boot &quot;your pachted kernelsu img file&#x27;s path&quot;</span><br><span class="line">fastboot flash init_boot_a &quot;your pachted kernelsu img file&#x27;s path&quot;</span><br><span class="line">fastboot flash init_boot_b &quot;your pachted kernelsu img file&#x27;s path&quot;</span><br><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure>
 
 
@@ -115,7 +115,7 @@
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>License</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>Licensed under CC BY-NC-SA 4.0(<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">https://creativecommons.org/licenses/by-nc-sa/4.0/</a>)</p>
 </div>
     </section>
     </div>
