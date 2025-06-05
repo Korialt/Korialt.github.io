@@ -7406,19 +7406,19 @@ details.toc[open] >div.body section .header+.doc_tree {
   -o-transition: transform 1s ease-out;
 }
 .post-list .post-card .post-cover img {
-  object-fit: cover !important;
-  width: 100% !important;
-  border-radius: 0 !important;
-  aspect-ratio: '3 / 1' !important;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0;
+  aspect-ratio: 2;
 }
 .post-list .post-card.post.photo .cover {
   position: relative;
   line-height: 0;
 }
 .post-list .post-card.post.photo .cover img {
-  width: 100% !important;
-  object-fit: cover !important;
-  aspect-ratio: '3 / 1' !important;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 2;
 }
 .post-list .post-card.post.photo .cover:before {
   content: '';
